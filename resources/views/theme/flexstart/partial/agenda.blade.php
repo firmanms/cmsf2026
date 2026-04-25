@@ -45,7 +45,7 @@
                 <div class="swiper-slide">
                     <div class="col-lg-4">
                         <div class="card">
-                            <img src="{{ env('URL_BACKEND').'/storage/'.$agenda['image'] }}" class="img-fluid" alt="{{ $agenda['title'] }}">
+                            <img src="{{ env('URL_STORAGE').$agenda['image'] }}" class="img-fluid" alt="{{ $agenda['title'] }}">
                             <a href="#" aria-label="Read more about {{ $agenda['title'] }}">
                                 <h3>{{ $agenda['title'] }}</h3>
                             </a>

@@ -21,7 +21,7 @@
             @foreach ($data['banner'] as $banner)
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ $banner['kategori'] }}">
               <div class="portfolio-content h-100">
-                <img src="{{ env('URL_BACKEND')."/storage/".$banner['image'] }}" class="img-fluid" alt="">
+                <img src="{{ env('URL_STORAGE').$banner['image'] }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>App 1</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>

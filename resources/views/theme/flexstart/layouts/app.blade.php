@@ -13,7 +13,7 @@
   <meta property="og:image" content="@yield('image')">
 
   <!-- Favicons -->
-  <link href="{{ env('URL_BACKEND')."/storage/".$data['profil']['favicon'] }}" rel="icon">
+  <link href="{{ env('URL_STORAGE').$data['profil']['favicon'] }}" rel="icon">
   <link href="{{ asset("theme/flexstart/assets/img/apple-touch-icon.png")}}" rel="apple-touch-icon">
 
   <!-- Fonts -->

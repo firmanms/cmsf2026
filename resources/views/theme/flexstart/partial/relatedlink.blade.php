@@ -48,7 +48,7 @@
             <div class="swiper-wrapper align-items-center">
                 @foreach($data['relatedlink'] as $relatedlink)
                 <div class="swiper-slide">
-                    <a href="{{$relatedlink['url']}}"><img src="{{ env('URL_BACKEND').'/storage/'.$relatedlink['image'] }}" class="img-fluid" alt=""></a>
+                    <a href="{{$relatedlink['url']}}"><img src="{{ env('URL_STORAGE').$relatedlink['image'] }}" class="img-fluid" alt=""></a>
                 </div>
                 @endforeach
             </div>
@@ -104,7 +104,7 @@
           <div class="swiper-wrapper align-items-center">
             @foreach($data['relatedlink'] as $relatedlink)
             <div class="swiper-slide">
-              <a href="#"><img src="{{ env('URL_BACKEND')."/storage/".$relatedlink['image'] }}" class="img-fluid" alt=""></a>
+              <a href="#"><img src="{{ env('URL_STORAGE').$relatedlink['image'] }}" class="img-fluid" alt=""></a>
             </div>
             @endforeach
           </div>

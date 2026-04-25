@@ -22,7 +22,7 @@
                 <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="post-img position-relative overflow-hidden">
-                        <img src="{{ env('URL_BACKEND').'/storage/'.$posting['image'] }}" class="img-fluid" alt="">
+                        <img src="{{ env('URL_STORAGE').$posting['image'] }}" class="img-fluid" alt="">
                         <span class="post-date">{{ Carbon::parse($posting['published'])->translatedFormat('d F Y') }}</span>
                     </div>
 
@@ -78,7 +78,7 @@
             <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
 
               <div class="post-img position-relative overflow-hidden">
-                <img src="{{ env('URL_BACKEND')."/storage/".$posting['image'] }}" class="img-fluid" alt="">
+                <img src="{{ env('URL_STORAGE').$posting['image'] }}" class="img-fluid" alt="">
                 <span class="post-date">{{ Carbon::parse($posting['published'])->translatedFormat('d F Y') }}</span>
               </div>
 

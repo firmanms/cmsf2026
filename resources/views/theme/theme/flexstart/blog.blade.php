@@ -39,7 +39,7 @@
                                 <div class="col-12">
                                     <article>
                                         <div class="post-img">
-                                            <img src="{{ env('URL_BACKEND').'/storage/'.$aartikel['image'] }}" width="100%" alt="" class="img-fluid">
+                                            <img src="{{ env('URL_STORAGE').$aartikel['image'] }}" width="100%" alt="" class="img-fluid">
                                         </div>
                                         <h2 class="title">
                                             <a href="{{ url( '/detailblog/' . $aartikel['slug']) }}">{{ $aartikel['title'] }}</a>
@@ -130,7 +130,7 @@
                         <h3 class="widget-title">Terbaru</h3>
                         @foreach ($data['new_artikel'] as $artikel)
                         <div class="post-item">
-                          <img src="{{ env('URL_BACKEND')."/storage/".$artikel['image'] }}" width="100%" alt="" class="flex-shrink-0">
+                          <img src="{{ env('URL_STORAGE').$artikel['image'] }}" width="100%" alt="" class="flex-shrink-0">
                           <div>
                             <h4><a href="{{ url( '/detailblog/' . $artikel['slug']) }}">{{ $artikel['title']}}</a></h4>
                             <time datetime="{{ Carbon::parse($artikel['published'])->translatedFormat('d F Y') }}">{{ Carbon::parse($artikel['published'])->translatedFormat('d F Y') }}</time>
@@ -156,4 +156,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', $data['profil']['name'])
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )

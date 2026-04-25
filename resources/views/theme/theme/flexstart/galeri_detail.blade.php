@@ -59,7 +59,7 @@
 
                  @foreach ($data['detail_galeri']['image_gallery'] as $image)
                 <div class="swiper-slide">
-                  <img src="{{ env('URL_BACKEND')."/storage/".$image }}" alt="">
+                  <img src="{{ env('URL_STORAGE').$image }}" alt="">
                 </div>
                 @endforeach
 
@@ -94,4 +94,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', $data['detail_galeri']['title'])
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['detail_galeri']['image'] )
+@section('image',  env('URL_STORAGE').$data['detail_galeri']['image'] )

@@ -41,7 +41,7 @@
               <article class="article">
 
                 <div class="post-img">
-                  <img src="{{ env('URL_BACKEND').'/storage/'.$data['detail_blog']['image'] }}" width="100%" alt="" class="img-fluid">
+                  <img src="{{ env('URL_STORAGE').$data['detail_blog']['image'] }}" width="100%" alt="" class="img-fluid">
                 </div>
 
                 <h2 class="title">{{ $data['detail_blog']['title'] }}</h2>
@@ -56,7 +56,7 @@
                 <div class="content" style="max-width: 100%;max-height: 100%;overflow: auto;box-sizing: border-box; ">
                   @php
                       $htmlContent = $data['detail_blog']['description'];
-                      $absoluteUrl = env('URL_BACKEND').'storage/';
+                      $absoluteUrl = env('URL_STORAGE');
                       $relativePath = '/storage/';
 
                       $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -113,7 +113,7 @@
               <h3 class="widget-title">Terbaru</h3>
               @foreach ($data['artikel'] as $artikel)
               <div class="post-item">
-                <img src="{{ env('URL_BACKEND')."/storage/".$artikel['image'] }}" width="100%" alt="" class="flex-shrink-0">
+                <img src="{{ env('URL_STORAGE').$artikel['image'] }}" width="100%" alt="" class="flex-shrink-0">
                 <div>
                   <h4><a href="{{ url( '/detailblog/' . $artikel['slug']) }}">{{ $artikel['title']}}</a></h4>
                   <time datetime="{{ Carbon::parse($artikel['published'])->translatedFormat('d F Y') }}">{{ Carbon::parse($artikel['published'])->translatedFormat('d F Y') }}</time>
@@ -144,4 +144,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', $data['detail_blog']['title'])
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['detail_blog']['image'] )
+@section('image',  env('URL_STORAGE').$data['detail_blog']['image'] )

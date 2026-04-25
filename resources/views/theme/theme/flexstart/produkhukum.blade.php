@@ -61,7 +61,7 @@
                                             Download
                                         </a>
                                     @else
-                                        <a href="{{ config('app.backend_url') . 'storage/' . $file['url'] }}" class="btn btn-primary btn-sm" download>
+                                        <a href="{{ config('app.storage_url') . $file['url'] }}" class="btn btn-primary btn-sm" download>
                                             Download
                                         </a>
                                     @endif
@@ -127,4 +127,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Produk Hukum')
 @section('name', $data['profil']['name'])
-@section('image', env('URL_BACKEND') . "storage/" . $data['profil']['logo'])
+@section('image', env('URL_STORAGE') . $data['profil']['logo'])

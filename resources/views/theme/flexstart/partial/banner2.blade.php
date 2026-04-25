@@ -21,7 +21,7 @@
                 @foreach ($groupedBanners[$kategori_banner['kategori']] as $banner)
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="card">
-                            <img src="{{ env('URL_BACKEND').'/storage/'.$banner['image'] }}" class="img-fluid" alt="">
+                            <img src="{{ env('URL_STORAGE').$banner['image'] }}" class="img-fluid" alt="">
                             <a href="{{ $banner['url'] }}"><h3>{{ $banner['title'] }}</h3></a>
                             <p>{{ $banner['description'] }}</p>
                         </div>
@@ -49,7 +49,7 @@
                 @if ($banner['kategori'] == $kategori_banner['kategori'])
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="card">
-                            <img src="{{ env('URL_BACKEND')."/storage/".$banner['image'] }}" class="img-fluid" alt="">
+                            <img src="{{ env('URL_STORAGE').$banner['image'] }}" class="img-fluid" alt="">
                             <a href="{{ $banner['url'] }}"><h3>{{ $banner['title'] }}</h3></a>
                             <p>{{ $banner['description'] }}</p>
                         </div>

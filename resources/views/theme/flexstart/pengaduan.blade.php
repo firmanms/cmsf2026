@@ -165,7 +165,7 @@
                         
                         @php
                         $htmlContent = $data['pengaduan']['jangka_waktu'] ;
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -178,7 +178,7 @@
                         
                         @php
                         $htmlContent = $data['pengaduan']['prosedur'] ;
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -191,7 +191,7 @@
                         
                         @php
                         $htmlContent = $data['pengaduan']['pengelola'] ;
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -218,7 +218,7 @@
                 <div class="carousel-inner">
                     @foreach ($data['pengaduan']['image'] as $index => $image)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                    <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                    <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                     </div>
                     @endforeach
                 </div>
@@ -243,4 +243,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Informasi Pengaduan')
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )

@@ -51,7 +51,7 @@
                     <b>Persyaratan :</b><br>
                     @php
                         $htmlContent = $services['requirement'];
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -61,7 +61,7 @@
                     <b>Mekanisme/Prosedur :</b><br>
                     @php
                         $htmlContent = $services['procedure'];
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -73,7 +73,7 @@
                     <b>Biaya :</b><br>
                     @php
                         $htmlContent = $services['cost'];
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -83,7 +83,7 @@
                     <b>Produk Layanan :</b><br>
                     @php
                         $htmlContent = $services['product'];
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -93,7 +93,7 @@
                     <b>Pengaduan :</b><br>
                     @php
                         $htmlContent = $services['complaint'];
-                        $absoluteUrl = env('URL_BACKEND').'storage/';
+                        $absoluteUrl = env('URL_STORAGE');
                         $relativePath = '/storage/';
 
                         $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -119,4 +119,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Informasi Layanan')
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )

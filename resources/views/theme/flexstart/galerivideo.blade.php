@@ -123,4 +123,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Galeri Video')
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )

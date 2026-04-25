@@ -36,7 +36,7 @@
        
         @php
             $htmlContent = $data['profil']['visimisi'];
-            $absoluteUrl = env('URL_BACKEND').'storage/';
+            $absoluteUrl = env('URL_STORAGE');
             $relativePath = '/storage/';
 
             $updatedHtmlContent = str_replace($relativePath, $absoluteUrl, $htmlContent);
@@ -51,4 +51,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Visi dan Misi')
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )

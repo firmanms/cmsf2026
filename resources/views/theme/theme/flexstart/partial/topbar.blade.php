@@ -3,7 +3,7 @@
 
       <a href="{{ url('/beranda') }}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ env('URL_BACKEND')."/storage/".$data['profil']['logo'] }}" alt="">
+        <img src="{{ env('URL_STORAGE').$data['profil']['logo'] }}" alt="">
         {{-- <h1 class="sitename">FlexStart</h1> --}}
       </a>
 

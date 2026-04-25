@@ -71,7 +71,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['ruang_tunggu'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -98,7 +98,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['meja_layanan'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -125,7 +125,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['parkir'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -152,7 +152,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['tempat_ibadah'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -179,7 +179,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['charger'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -206,7 +206,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['pojok_baca'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -233,7 +233,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['toilet'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -266,7 +266,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['petunjuk_layanan_khusus'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -293,7 +293,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['petunjuk_tanda'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -320,7 +320,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['narator'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -347,7 +347,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['huruf_braile'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -374,7 +374,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['kursi_roda'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -401,7 +401,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['rambatan'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -428,7 +428,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['laktasi'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -455,7 +455,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['kursi_prioritas'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -482,7 +482,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['parkir_khusus'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -509,7 +509,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['tempat_main'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -536,7 +536,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['lantai_pemandu'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -569,7 +569,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['apar'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -596,7 +596,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['jalur_evakuasi'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -623,7 +623,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['cctv'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -650,7 +650,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['petugas_keamanan'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -677,7 +677,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['titik_kumpul'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -704,7 +704,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['ruang_arsip'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -731,7 +731,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['red_button'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -764,7 +764,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['tata_tertib'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -791,7 +791,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['kode_etik'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -824,7 +824,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['si_pelayanan_publik'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -856,7 +856,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['visi'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -883,7 +883,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['misi'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -910,7 +910,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['motto'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -943,7 +943,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($data['facilities']['maklumat'] as $index => $image)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"  data-bs-interval="2000">
-                                        <img src="{{ env('URL_BACKEND')."/storage/".$image }}" class="d-block w-100" alt="...">
+                                        <img src="{{ env('URL_STORAGE').$image }}" class="d-block w-100" alt="...">
                                         </div>
                                         @endforeach
                                     </div>
@@ -975,4 +975,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Informasi Sarana')
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )

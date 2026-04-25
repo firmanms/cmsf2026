@@ -65,6 +65,7 @@ return [
     |
     */
   	'backend_url' => env('URL_BACKEND', 'http://localhost'),
+  	'storage_url' => env('URL_STORAGE', 'http://localhost/storage/'),
 
     'timezone' => env('APP_TIMEZONE', 'UTC'),
 

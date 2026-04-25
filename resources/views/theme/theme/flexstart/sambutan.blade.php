@@ -56,7 +56,7 @@
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ env('URL_BACKEND')."/storage/".$data['profil']['leader_foto'] }}" class="img-fluid" alt="">
+            <img src="{{ env('URL_STORAGE').$data['profil']['leader_foto'] }}" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -71,4 +71,4 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Sambutan Pimpinan')
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )

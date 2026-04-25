@@ -48,11 +48,11 @@
           @foreach ($data['galeri'] as $galeri)
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ $galeri['category']}}">
               <div class="portfolio-content h-100">
-                <img src="{{ env('URL_BACKEND')."/storage/".$galeri['image'] }}" class="img-fluid" alt="">
+                <img src="{{ env('URL_STORAGE').$galeri['image'] }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>{{ $galeri['category']}}</h4>
                   <p>{{ $galeri['title']}}</p>
-                  <a href="{{ env('URL_BACKEND')."/storage/".$galeri['image'] }}" title="{{ $galeri['category']}}" data-gallery="portfolio-gallery-{{ $galeri['category']}}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{ env('URL_STORAGE').$galeri['image'] }}" title="{{ $galeri['category']}}" data-gallery="portfolio-gallery-{{ $galeri['category']}}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="{{ url( '/detailgaleri/' . $galeri['slug']) }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -72,5 +72,5 @@
 @section('keyword', $data['profil']['seo_desc'])
 @section('title', 'Galeri')
 @section('name', $data['profil']['name'])
-@section('image',  env('URL_BACKEND')."storage/".$data['profil']['logo'] )
+@section('image',  env('URL_STORAGE').$data['profil']['logo'] )
  

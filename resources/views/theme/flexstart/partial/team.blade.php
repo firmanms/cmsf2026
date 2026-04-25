@@ -54,7 +54,7 @@
         <div class="swiper-slide">
           <div class="team-member">
             <div class="member-img">
-              <img src="{{ env('URL_BACKEND').'/storage/'.$pegawai['image'] }}" class="img-fluid" alt="">
+              <img src="{{ env('URL_STORAGE').$pegawai['image'] }}" class="img-fluid" alt="">
               <div class="social">
                 @if($pegawai['tiktok'])
                 <a href="https://tiktok.com/{{ $pegawai['tiktok'] }}"><i class="bi bi-tiktok"></i></a>
@@ -133,7 +133,7 @@
         <div class="swiper-slide">
           <div class="team-member">
             <div class="member-img">
-              <img src="{{ env('URL_BACKEND')."/storage/".$pegawai['image'] }}" class="img-fluid" alt="">
+              <img src="{{ env('URL_STORAGE').$pegawai['image'] }}" class="img-fluid" alt="">
               <div class="social">
                 <a href="https://tiktok.com/{{ $pegawai['tiktok'] }}"><i class="bi bi-tiktok"></i></a>
                 <a href="https://facebook.com/{{ $pegawai['facebook'] }}"><i class="bi bi-facebook"></i></a>
