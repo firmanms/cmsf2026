@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Data Kependudukan</title>
+    <style>
+        /* --- CSS STYLING (Sama seperti sebelumnya) --- */
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            color: var(--text-dark);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s;
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card:nth-child(1) { border-left-color: #3b82f6; }
+        .card:nth-child(2) { border-left-color: #10b981; }
+        .card:nth-child(3) { border-left-color: #f59e0b; }
+        .card:nth-child(4) { border-left-color: #ef4444; }
+
+        .card-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            border-top: 1px solid #e5e7eb;
+            padding-top: 10px;
+        }
+
+        .loading {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Overview Data Kependudukan</h2>
+
+    <div id="app" class="dashboard-container">
+        <div class="loading">Memuat data...</div>
+    </div>
+
+    <script>
+        const dataUrl = 'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjpsaGQzxUzzOzuftnTXTIB1B1leEmqHqlfbxIpKNdyckWP-0xjQPMGkZfSL0VwjHV-UJ7KLD3dz5I_OZko3JJDQcA9LdO6n6OAqQeUwLVaNMWdk9dRMGXw5yON6pnIFGt9dKkevLEohjgzVamEN3HBCm0DO_o9cNT5ij3ICWUZD2X-Wn9MS1WILtGf60ZeVsdX8V1y9AQ7pwYxBWh3tDG11ydo24ch4IwwPHw_rcwLFLIaIhLJiIoxGKF4EX3wpjfYRgq7HO2aIiq7YWyZz7k0XSWpzA&lib=M97uiOUFzJ5s3TyoLYsdwE1tKs-Q1xsYy';
+
+        function formatNumber(num) {
+            return new Intl.NumberFormat('id-ID').format(num);
+        }
+
+        // FUNGSI BARU: Format Tanggal ke GMT+7 (WIB)
+        function formatDescription(text) {
+            // Cek apakah teks mengandung pola tanggal (YYYY-MM-DD) dan huruf T
+            if (typeof text === 'string' && text.includes('T') && text.match(/\d{4}-\d{2}-\d{2}/)) {
+                const date = new Date(text);
+                
+                // Konfigurasi agar hanya menampilkan Tanggal dalam format Indonesia & Timezone Jakarta
+                const options = { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric',
+                    timeZone: 'Asia/Jakarta' // Ini kunci untuk GMT+7
+                };
+                
+                return date.toLocaleDateString('id-ID', options);
+            }
+            return text;
+        }
+
+        async function fetchData() {
+            const container = document.getElementById('app');
+            try {
+                const response = await fetch(dataUrl);
+                if (!response.ok) throw new Error('Gagal mengambil data');
+                const data = await response.json();
+                
+                container.innerHTML = '';
+
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    
+                    const content = `
+                        <div>
+                            <div class="card-title">${item.Kategori}</div>
+                            <div class="card-value">${formatNumber(item.Jumlah)}</div>
+                        </div>
+                        <div class="card-footer">
+                            ${formatDescription(item.Keterangan)}
+                        </div>
+                    `;
+                    
+                    card.innerHTML = content;
+                    container.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error('Error:', error);
+                container.innerHTML = `<div style="text-align:center; color:red; grid-column: 1/-1;">Gagal memuat data.</div>`;
+            }
+        }
+
+        fetchData();
+    </script>
+</body>
+</html>
