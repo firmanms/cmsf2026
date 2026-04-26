@@ -15,7 +15,7 @@ class ApiController extends Controller
         $client = new Client();
         $url = env('ENDPOINT_BACKEND') . "/posts";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
         $ipAdress = $request->ip();
 
         // Cek Token
@@ -77,7 +77,7 @@ class ApiController extends Controller
         $client = new Client();
         $url = env('ENDPOINT_BACKEND') . "/blog?page=" . $request->get('page', 1); // Ambil halaman dari query string
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         if (!$token) {
             return view('api-data', ['error' => 'Token not set in .env']);
@@ -113,7 +113,7 @@ class ApiController extends Controller
         $client = new Client();
         $url = env('ENDPOINT_BACKEND') . "/blogkategori/?page=" . $request->get('page', 1); // Ambil halaman dari query string
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         if (!$token) {
             return view('api-data', ['error' => 'Token not set in .env']);
@@ -151,7 +151,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/pages";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -189,7 +189,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/detailblog";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -227,7 +227,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/posts";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(vars: $url);
 
@@ -269,7 +269,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/galeri";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -309,7 +309,7 @@ class ApiController extends Controller
         $client = new Client(); // Membuat instance Guzzle
         $url = env('ENDPOINT_BACKEND') . "/detailgaleri";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         if (!$token) {
             return view('api-data', ['error' => 'Token not set in .env']);
@@ -348,7 +348,7 @@ class ApiController extends Controller
         $client = new Client();
         $url = env('ENDPOINT_BACKEND') . "/galerivideo?page=" . $request->get('page', 1); // Ambil halaman dari query string
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         if (!$token) {
             return view('api-data', ['error' => 'Token not set in .env']);
@@ -390,7 +390,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/layanan";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -424,7 +424,7 @@ class ApiController extends Controller
     {
         $url = env('ENDPOINT_BACKEND') . "/sarana";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
         // dd($url_frontend);
 
         if (!$token) {
@@ -466,7 +466,7 @@ class ApiController extends Controller
 
     //     $url = env('ENDPOINT_BACKEND')."/sarana"; 
     //     $token = env('KODE_BACKEND'); 
-    //     $url_frontend = env('URL_FRONTEND');
+    //     $url_frontend = request()->getHost();
 
     //     // dd(env('ENDPOINT_BACKEND'));
 
@@ -508,7 +508,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/pengaduan";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -550,7 +550,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/sejarah";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -592,7 +592,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/visimisi";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -634,7 +634,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/tupoksi";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -676,7 +676,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/struktur";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -718,7 +718,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/sambutan";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -760,7 +760,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/skm";
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
@@ -796,7 +796,7 @@ class ApiController extends Controller
         $search = $request->input('search');
         $url = env('ENDPOINT_BACKEND') . "/produkhukum?page=" . $request->get('page', 1) . "&search=" . urlencode($search);
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         if (!$token) {
             return view('api-data', ['error' => 'Token not set in .env']);
@@ -833,7 +833,7 @@ class ApiController extends Controller
         $search = $request->input('search');
         $url = env('ENDPOINT_BACKEND') . "/dokumenupload?page=" . $request->get('page', 1) . "&search=" . urlencode($search);
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         if (!$token) {
             return view('api-data', ['error' => 'Token not set in .env']);
@@ -875,7 +875,7 @@ class ApiController extends Controller
 
         $url = env('ENDPOINT_BACKEND') . "/bukutamu?page=" . $request->get('page', 1);
         $token = env('KODE_BACKEND');
-        $url_frontend = env('URL_FRONTEND');
+        $url_frontend = request()->getHost();
 
         // dd(env('ENDPOINT_BACKEND'));
 
