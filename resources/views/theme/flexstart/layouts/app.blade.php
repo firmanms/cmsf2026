@@ -41,12 +41,12 @@
   <style>
     /* Target hanya gambar di dalam container ini */
     .container[data-aos="fade-up"] img {
-        max-width: 100% !important;
-        width: 100% !important;
-        height: auto !important;
-        display: block;
+      max-width: 100% !important;
+      width: 100% !important;
+      height: auto !important;
+      display: block;
     }
-</style>
+  </style>
 </head>
 
 <body class="index-page">
@@ -57,16 +57,16 @@
 
   <main class="main">
 
-  @yield('content')   
+    @yield('content')
 
   </main>
 
   <footer id="footer" class="footer">
 
-  <div class="footer-newsletter">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        {{-- <div class="col-lg-6">
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          {{-- <div class="col-lg-6">
           <h4>Join Our Newsletter</h4>
           <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
           <form action="forms/newsletter.php" method="post" class="php-email-form">
@@ -76,73 +76,75 @@
             <div class="sent-message">Your subscription request has been sent. Thank you!</div>
           </form>
         </div> --}}
-      </div>
-    </div>
-  </div>
-
-  <div class="container footer-top">
-    <div class="row gy-4">
-      
-      <div class="col-lg-4 col-md-6 footer-about">
-        <a href="{{ url('/beranda') }}" class="d-flex align-items-center">
-          <span class="sitename">{{ $data['profil']['name'] }}</span>
-        </a>
-        <div class="footer-contact pt-3">
-          <p>{{ $data['profil']['office_address'] }}</p>
-          <p class="mt-3"><strong>Telp:</strong> <span>{{ $data['profil']['office_telp'] }}</span></p>
-          <p class="mt-3"><strong>Whatsapp:</strong> <span>{{ $data['profil']['office_whatsapp'] }}</span></p>
-          <p class="mt-3"><strong>Email:</strong> <span>{{ $data['profil']['office_email'] }}</span></p>
         </div>
       </div>
+    </div>
 
-      <div class="col-lg-2 col-md-3 footer-links">
-        {{-- <h4>Useful Links</h4>
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="{{ url('/beranda') }}" class="d-flex align-items-center">
+            <span class="sitename">{{ $data['profil']['name'] }}</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>{{ $data['profil']['office_address'] }}</p>
+            <p class="mt-3"><strong>Telp:</strong> <span>{{ $data['profil']['office_telp'] }}</span></p>
+            <p class="mt-3"><strong>Whatsapp:</strong> <span>{{ $data['profil']['office_whatsapp'] }}</span></p>
+            <p class="mt-3"><strong>Email:</strong> <span>{{ $data['profil']['office_email'] }}</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          {{-- <h4>Useful Links</h4>
         <ul>
           <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
         </ul> --}}
-      </div>
+        </div>
 
-      <div class="col-lg-2 col-md-3 footer-links">
-        {{-- <h4>Our Services</h4>
+        <div class="col-lg-2 col-md-3 footer-links">
+          {{-- <h4>Our Services</h4>
         <ul>
           <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
           <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
         </ul> --}}
-      </div>
+        </div>
 
-      <div class="col-lg-4 col-md-12">
-        <h4>Ikuti Kami</h4>
-        {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
-        
-        <div class="social-links d-flex">
-          <a href="{{ $data['profil']['tw'] }}"><i class="bi bi-twitter-x"></i></a>
-          <a href="{{ $data['profil']['fb'] }}"><i class="bi bi-facebook"></i></a>
-          <a href="{{ $data['profil']['ig'] }}"><i class="bi bi-instagram"></i></a>
-          <a href="{{ $data['profil']['channel_yt'] }}"><i class="bi bi-youtube"></i></a>
-          <a href="{{ $data['profil']['tiktok'] }}"><i class="bi bi-tiktok"></i></a>
-        </div> <div class="visitor-stats mt-4 pt-3 border-top">
+        <div class="col-lg-4 col-md-12">
+          <h4>Ikuti Kami</h4>
+          {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
+
+          <div class="social-links d-flex">
+            <a href="{{ $data['profil']['tw'] }}"><i class="bi bi-twitter-x"></i></a>
+            <a href="{{ $data['profil']['fb'] }}"><i class="bi bi-facebook"></i></a>
+            <a href="{{ $data['profil']['ig'] }}"><i class="bi bi-instagram"></i></a>
+            <a href="{{ $data['profil']['channel_yt'] }}"><i class="bi bi-youtube"></i></a>
+            <a href="{{ $data['profil']['tiktok'] }}"><i class="bi bi-tiktok"></i></a>
+            <!-- </div> <div class="visitor-stats mt-4 pt-3 border-top">
           <h4 class="fs-5 mb-3">Statistik Pengunjung</h4>
           <div id="stat-container" class="text-sm">
             <span class="text-muted">Memuat data...</span>
           </div>
+        </div> -->
+          </div>
+
+        </div>
+      </div>
+      <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">{{ $data['profil']['singkatan'] }} X Diskominfo </strong> <span></span></p>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
 
-    </div> </div> <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">{{ $data['profil']['singkatan'] }} X Diskominfo </strong> <span></span></p>
-    <div class="credits">
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </div>
+  </footer>
 
-</footer>
-
-<script>
+  <!-- <script>
   document.addEventListener("DOMContentLoaded", function() {
     // 1. URL Web App kamu
     const scriptUrl = 'https://script.google.com/macros/s/AKfycbxrsGdsZuYL9-pnOrQfYqYrdmJ6mlXMIggg37y9AnKfgWbDsrUoWdNO-RPcNSB4rkD91Q/exec'; 
@@ -195,7 +197,7 @@
       document.getElementById('stat-container').innerHTML = '<span class="text-muted">Gagal merekam statistik.</span>';
     });
   });
-</script>
+</script> -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -214,24 +216,32 @@
   <script src="{{ asset("theme/flexstart/assets/js/main.js")}}"></script>
   <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
   <!-- GetButton.io widget -->
-<script type="text/javascript">
-    (function () {
-        var a = "<?php echo $data['profil']['office_whatsapp']; ?>";
-      	var b = "<?php echo $data['profil']['office_telp']; ?>";
-        var options = {
-            whatsapp: a, // Ganti dengan nomor WhatsApp Anda
-            call: b, // Ganti dengan nomor WhatsApp And
-            call_to_action: "Hubungi kami", // Pesan yang akan muncul di tombol
-            position: "right", // Posisi tombol (left atau right)
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  <script type="text/javascript">
+    (function() {
+      var a = "<?php echo $data['profil']['office_whatsapp']; ?>";
+      var b = "<?php echo $data['profil']['office_telp']; ?>";
+      var options = {
+        whatsapp: a, // Ganti dengan nomor WhatsApp Anda
+        call: b, // Ganti dengan nomor WhatsApp And
+        call_to_action: "Hubungi kami", // Pesan yang akan muncul di tombol
+        position: "right", // Posisi tombol (left atau right)
+      };
+      var proto = document.location.protocol,
+        host = "getbutton.io",
+        url = proto + "//static." + host;
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function() {
+        WhWidgetSendButton.init(host, proto, options);
+      };
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
     })();
-</script>
+  </script>
 
-<!-- /GetButton.io widget -->
+  <!-- /GetButton.io widget -->
 
 </body>
 

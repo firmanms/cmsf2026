@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
+use Illuminate\Support\Facades\Artisan;
 
 // Route::get('/', function () {
 //     return view('theme.flexstart.layouts.app');
@@ -27,3 +28,18 @@ Route::get('/page/statis/visimisi', [ApiController::class, 'visimisi'])->name('v
 Route::get('/page/statis/tupoksi', [ApiController::class, 'tupoksi'])->name('tupoksi');
 Route::get('/page/statis/struktur', [ApiController::class, 'struktur'])->name('struktur');
 Route::get('/page/statis/sambutan', [ApiController::class, 'sambutan'])->name('sambutan');
+Route::get('/page/statis/bukutamu', [ApiController::class, 'bukutamu'])->name('bukutamu');
+Route::post('/kirim/bukutamu', [ApiController::class, 'storeBukutamu'])->name('bukutamu.store');
+Route::get('/optimize', function () {
+    Artisan::call('optimize');
+    return "Optimize!";
+});
+Route::get('/clear', function () {
+    $commands = ['config:clear', 'cache:clear', 'view:clear', 'route:clear'];
+
+    foreach ($commands as $command) {
+        Artisan::call($command);
+    }
+
+    return "All caches cleared successfully!";
+});
